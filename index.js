@@ -38,12 +38,11 @@ console.log(getSecondSundayOfMarchAt2AM(2024));
 // Entre el 1er domingo de noviembre y el 2o domingo de marzo del año próximo, la zona horaria de varios municipios se alínea con el horario del centro del país.
 // Estos son
 /*
-Baja California: San Quintín, Tecate, Tijuana, Ensenada, Mexicali y Playas de Rosarito.
-Chihuahua: Guadalupe, Janos, Juárez, Manuel Benavides, Ojinaga, Praxedis G. Guerrero.Ascención y Coyame del Sotol.
-Coahuila: Jiménez, Morelos, Nava, Ocampo, Piedras Negras, Villa Unión, Zaragoza, Acuña, Allende, Hidalgo y Guerrero.
-Nuevo León: Anáhuac.
-Tamaulipas: Miguel Alemán, Mier, Nuevo Laredo, Reynosa, Río Bravo, Valle Hermoso, Camargo, Guerrero, Gustavo Díaz Ordaz y Matamoros.
+    Pasa de UTC-8 a UTC-7 en verano: todo el estado de Baja California.
+    De UTC-7 a UTC-6: en Chihuahua, los municipios de Janos, Ascensión, Juárez, Praxedis G. Guerrero y Guadalupe.
+    De UTC-6 a UTC-5: en Chihuahua, los municipios de Coyame del Sotol, Ojinaga y Manuel Benavides; en Coahuila, los municipios de Acuña, Allende, Guerrero, Hidalgo, Jiménez, Morelos, Nava, Ocampo, Piedras Negras, Villa Unión y Zaragoza; en Nuevo León, el municipio de Anáhuac; y en Tamaulipas, los municipios de Nuevo Laredo, Guerrero, Mier, Miguel Alemán, Camargo, Gustavo Díaz Ordaz, Reynosa, Río Bravo, Valle Hermoso y Matamoros.
 */
+// Fuente de los deseos: https://es.wikipedia.org/wiki/Husos_horarios_de_M%C3%A9xico
 
 function isDateInRange(date, startDate, endDate) {
     // Ensure all inputs are valid Date objects
