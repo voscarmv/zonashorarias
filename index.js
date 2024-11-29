@@ -35,6 +35,26 @@ function getSecondSundayOfMarchAt2AM(year) {
 // Example usage
 console.log(getSecondSundayOfMarchAt2AM(2024));
 
+/*
+Horario de invierno
+
+Zona Sureste: UTC-5
+
+    Quintana Roo
+
+Zona Centro UTC- 6
+
+    Aguascalientes, Campeche, Chiapas, Chihuahua, Coahuila, Colima (excepto islas San Benedicto, Socorro y Roca Partida), Ciudad de México, Durango, Guanajuato, Guerrero, Hidalgo, Jalisco, México, Michoacán, Morelos, Nayarit (solo Bahía de Banderas), Nuevo León, Oaxaca, Puebla, Querétaro, San Luis Potosí, Tabasco, Tamaulipas, Tlaxcala, Veracruz, Yucatán, Zacatecas
+
+Zona Pacífico: UTC-7
+
+    Baja California Sur, Colima (solo islas San Benedicto, Socorro y Roca Partida, que pertenecen al archipiélago de Revillagigedo), Nayarit (excepto Bahía de Banderas), Sinaloa, Sonora
+
+Zona Noroeste: UTC-8 (UTC-7 en verano)
+
+    Baja California, Colima (solo Isla Clarión, que pertenece al archipiélago de Revillagigedo; no aplica Horario de Verano)
+*/
+
 // Entre el 1er domingo de noviembre y el 2o domingo de marzo del año próximo, la zona horaria de varios municipios se alínea con el horario del centro del país.
 // Estos son
 /*
