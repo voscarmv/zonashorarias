@@ -166,3 +166,60 @@ function tz(edo, mun){
     }
     return timezone;
   }
+
+
+  // Brought to you by ChatGPT
+
+  function determinarZonaHoraria(esHorarioVerano, estado, municipio) {
+    const zonaSureste = ["Quintana Roo"];
+    const zonaCentro = [
+        "Aguascalientes", "Campeche", "Chiapas", "Chihuahua", "Coahuila", "Colima",
+        "Ciudad de México", "Durango", "Guanajuato", "Guerrero", "Hidalgo", "Jalisco",
+        "México", "Michoacán", "Morelos", "Nayarit", "Nuevo León", "Oaxaca", "Puebla",
+        "Querétaro", "San Luis Potosí", "Tabasco", "Tamaulipas", "Tlaxcala", "Veracruz",
+        "Yucatán", "Zacatecas"
+    ];
+    const zonaPacifico = ["Baja California Sur", "Colima", "Nayarit", "Sinaloa", "Sonora"];
+    const zonaNoroeste = ["Baja California"];
+
+    const municipiosHorarioEspecial = {
+        // De UTC-7 a UTC-6
+        "Chihuahua": ["Janos", "Ascensión", "Juárez", "Praxedis G. Guerrero", "Guadalupe"],
+        // De UTC-6 a UTC-5
+        "Chihuahua": ["Coyame del Sotol", "Ojinaga", "Manuel Benavides"],
+        "Coahuila": ["Acuña", "Allende", "Guerrero", "Hidalgo", "Jiménez", "Morelos", "Nava", "Ocampo", "Piedras Negras", "Villa Unión", "Zaragoza"],
+        "Nuevo León": ["Anáhuac"],
+        "Tamaulipas": ["Nuevo Laredo", "Guerrero", "Mier", "Miguel Alemán", "Camargo", "Gustavo Díaz Ordaz", "Reynosa", "Río Bravo", "Valle Hermoso", "Matamoros"]
+    };
+
+    if (zonaSureste.includes(estado)) {
+        return "UTC-5";
+    }
+
+    if (zonaCentro.includes(estado)) {
+        if (municipiosHorarioEspecial[estado] && municipiosHorarioEspecial[estado].includes(municipio)) {
+            return esHorarioVerano ? "UTC-5" : "UTC-6";
+        }
+        return "UTC-6";
+    }
+
+    if (zonaPacifico.includes(estado)) {
+        if (estado === "Nayarit" && municipio === "Bahía de Banderas") {
+            return "UTC-6";
+        }
+        return "UTC-7";
+    }
+
+    if (zonaNoroeste.includes(estado)) {
+        return esHorarioVerano ? "UTC-7" : "UTC-8";
+    }
+
+    return "Zona no identificada";
+}
+
+// Ejemplo de uso
+console.log(determinarZonaHoraria(true, "Chihuahua", "Juárez")); // Output: "UTC-6"
+console.log(determinarZonaHoraria(false, "Quintana Roo", "")); // Output: "UTC-5"
+console.log(determinarZonaHoraria(true, "Baja California", "")); // Output: "UTC-7"
+
+console.log(determinarZonaHoraria(false, "Tamaulipas", "Matamoros")); // Output: "UTC-6"
