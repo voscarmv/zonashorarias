@@ -41,6 +41,8 @@ console.log(getSecondSundayOfMarchAt2AM(2024));
     Pasa de UTC-8 a UTC-7 en verano: todo el estado de Baja California.
     De UTC-7 a UTC-6: en Chihuahua, los municipios de Janos, Ascensión, Juárez, Praxedis G. Guerrero y Guadalupe.
     De UTC-6 a UTC-5: en Chihuahua, los municipios de Coyame del Sotol, Ojinaga y Manuel Benavides; en Coahuila, los municipios de Acuña, Allende, Guerrero, Hidalgo, Jiménez, Morelos, Nava, Ocampo, Piedras Negras, Villa Unión y Zaragoza; en Nuevo León, el municipio de Anáhuac; y en Tamaulipas, los municipios de Nuevo Laredo, Guerrero, Mier, Miguel Alemán, Camargo, Gustavo Díaz Ordaz, Reynosa, Río Bravo, Valle Hermoso y Matamoros.
+
+    Cada año el horario de verano fronterizo empieza el segundo domingo de marzo, a las 2:00 (que pasan a ser las 3:00), y concluye el primer domingo de noviembre, a las 2:00 (que pasan a ser la 1:00). domingo de abril, a las 2:00 Primer (que a ser domingo de octubre, las 3:00). 
 */
 // Fuente de los deseos: https://es.wikipedia.org/wiki/Husos_horarios_de_M%C3%A9xico
 
