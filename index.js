@@ -214,7 +214,7 @@ function tz(edo, mun){
         return esHorarioVerano ? "UTC-7" : "UTC-8";
     }
 
-    return "Zona no identificada";
+    return "UTC-6";
 }
 
 // Ejemplo de uso
@@ -223,3 +223,13 @@ console.log(determinarZonaHoraria(false, "Quintana Roo", "")); // Output: "UTC-5
 console.log(determinarZonaHoraria(true, "Baja California", "")); // Output: "UTC-7"
 
 console.log(determinarZonaHoraria(false, "Tamaulipas", "Matamoros")); // Output: "UTC-6"
+
+const utc1 = 'UTC-5';
+const utc2 = 'UTC-6';
+
+const u1 = utc1.split('-')[1];
+const u2 = utc2.split('-')[1];
+
+const diff = u1-u2;
+
+console.log(diff);
